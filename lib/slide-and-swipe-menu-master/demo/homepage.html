@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Slide and Swipe Menu</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- CSS stylesheet for example -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+
+        <!-- CSS stylesheet for sliding-swipe-menu -->
+        <link rel="stylesheet" href="css/slide-and-swipe-menu.css">
+		<style>
+		.mainpage{
+			/*  background-color: #f1f1f1; */
+			background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.champselysees-paris.com/images/restaurant-images/home_haagen_dazs_fev_2012_hp_997485720.jpeg') no-repeat center;
+			/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.champselysees-paris.com/images/restaurant-images/home_haagen_dazs_fev_2012_hp_997485720.jpeg') no-repeat center; */
+			/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('http://www.champselysees-paris.com/images/restaurant-images/home_haagen_dazs_fev_2012_hp_997485720.jpeg') no-repeat center; */
+			background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.champselysees-paris.com/images/restaurant-images/home_haagen_dazs_fev_2012_hp_997485720.jpeg') no-repeat center;
+			background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.champselysees-paris.com/images/restaurant-images/home_haagen_dazs_fev_2012_hp_997485720.jpeg') no-repeat center;
+			background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.champselysees-paris.com/images/restaurant-images/home_haagen_dazs_fev_2012_hp_997485720.jpeg') no-repeat center;
+			background-size: cover;
+			margin: 0;
+			height:100%;
+		}
+		
+			.burger{
+				border-radius:5px;
+				background:white;
+				width:21px;
+				height:3px;
+				margin:6px;
+				color:rgba(0,0,0,0);
+			}
+			
+			a{
+				text-decoration:none;
+			}
+			
+			.header img{
+				max-width: 100%;
+				width: 30%;
+				/* position: absolute; */
+				margin: -17% 0 -27px -6%;
+			}
+			
+			.contenthome {
+				width: 100%;
+				height: 93.7%;
+				margin-top: 0px;
+				padding-top: 140% !important;
+				color: white;
+			}
+			
+			.contenthome div{
+				text-align:left;
+				position:fixed;
+				padding-left:21px;
+			}
+			
+			.contenthome div p, .contenthome div h3{
+				margin:0;
+			}
+		</style>
+    </head>
+    <body>
+	<section class="mainpage">
+		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:33px;">
+			<a href="#" class="ssm-toggle-nav" title="open nav">
+				<div class="burger">as</div>
+				<div class="burger">as</div>
+				<div class="burger">as</div>
+			</a>
+			<img src="../../../logo-head.png" />
+			
+		</section>
+		<section class="contenthome">
+			<div>
+				<h3>Hallo Agus Supriyadi</h3>
+				<p>*** <span>1200 poin</span></p>
+			</div>
+		</section>
+        <nav class="nav">
+            <img src="../../../logo-head.png" width="23%" style="margin-bottom:20px" alt="swipe image" />
+            
+			<p>Ice Cream</p>
+			<p>Gelato</p>
+			<p>Bars</p>
+			<p>Frozen Yogurt</p>
+			<p>Sorbet</p>
+			
+        </nav>
+        
+	</section>
+		
+        <!-- jQuery library (served from Google) -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+        <!-- touchSwipe library -->
+        <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+
+        <!-- Slider Javascript file -->
+        <script src="../jquery.slideandswipe.min.js"></script>
+
+        <div class="ssm-overlay ssm-toggle-nav"></div>
+
+        <script>
+            $(document).ready(function() {
+                $('.nav').slideAndSwipe();
+				
+				var buka=0;
+				
+				$(".ssm-toggle-nav").click(function(){
+					 $( ".contenthome" ).fadeToggle( "fast", "linear");
+					$(".header").slideToggle( "fast");
+				});
+            });
+        </script>
+
+    </body>
+</html>

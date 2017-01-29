@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<head>
+<title>Haagen Daaz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="">
+<link rel="canonical" href="">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+<style>
+	.mainpage{
+		
+		margin: 0;
+		height:98%;
+	}
+
+	.burger{
+		border-radius:5px;
+		background:white;
+		width:21px;
+		height:3px;
+		margin:6px;
+		color:rgba(0,0,0,0);
+	}
+	
+	a{
+		text-decoration:none;
+	}
+	
+	.header img{
+		max-width: 100%;
+		width: 30%;
+		/* position: absolute; */
+		margin: -13% 0 -27px -6%;
+	}
+	
+	.contentshop {
+		width: 100%;
+		margin-top: 0px;
+		color: black;
+		min-height: 91.5%;
+		
+	}
+	
+	
+	
+	nav {
+		height: 100%;
+		width: 280px;
+		background-color: rgba(27,27,27,.9);
+		left: 0;
+		top: 0;
+		z-index: 2;
+		position: fixed;
+		overflow-y: auto;
+		overflow-x: visible;
+		
+		text-align:left;
+		transform: translate(-280px,0);
+	}
+	.ssm-overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.2);
+		display: none;
+		z-index: 1;
+	}
+	.is-navOpen{
+	  overflow: hidden;
+	}
+
+	nav.nav {
+		color: #fff;
+		line-height:1.2em;
+		font-size:16pt;
+	}
+
+	html,
+	body {
+		height: 100%;
+	}
+
+	body {
+	   
+		font-family: 'Open Sans';
+		color: #333;
+		margin: 0;
+		text-align: center;
+	}
+	
+	
+	footer{
+	font-size:8pt;
+	color:white;
+	background:#020100;
+	text-align:center;
+	padding-bottom:10px;
+}
+	.no-padding{
+		padding:0 !important;
+		margin: 0 !important;
+	}
+
+	.products{
+		height:43vh;
+		text-align:center;
+		color:white;
+		padding-top:53%;
+	}
+	
+	.products button{
+		width:83%;
+		font-size:3vw;
+		font-weight:thin;
+		background:none;
+		padding:4px 4px;
+		border: 1px white solid;
+		text-transform:uppercase;
+	}
+	
+	.products a{
+		color:white;
+	}
+	
+	.products a:hover{
+		color:white;
+	}
+	
+	.prod1a{
+		/*  background-color: #f1f1f1; */
+		background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_chocolatepeanutbutter_hero.jpg') no-repeat center;
+		/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_chocolatepeanutbutter_hero.jpg') no-repeat center; */
+		/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('http://www.haagendazs.us/images/products/hero/fl_icecream_chocolatepeanutbutter_hero.jpg') no-repeat center; */
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_chocolatepeanutbutter_hero.jpg') no-repeat center;
+		background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_chocolatepeanutbutter_hero.jpg') no-repeat center;
+		background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_chocolatepeanutbutter_hero.jpg') no-repeat center;
+		background-size: cover;
+		
+	}
+	
+	.prod1b{
+		/*  background-color: #f1f1f1; */
+		background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_caramelcone_hero.jpg') no-repeat center;
+		/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_caramelcone_hero.jpg') no-repeat center; */
+		/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('http://www.haagendazs.us/images/products/hero/fl_icecream_caramelcone_hero.jpg') no-repeat center; */
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://1.bp.blogspot.com/--07C_KaSFrk/U58GtD5FayI/AAAAAAAAJy8/kHi6-gec9hU/s1600/DSC_0108.png') no-repeat center;
+		background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_caramelcone_hero.jpg') no-repeat center;
+		background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.haagendazs.us/images/products/hero/fl_icecream_caramelcone_hero.jpg') no-repeat center;
+		background-size: cover;
+		
+		
+	}
+	
+	.prod1c{
+		/*  background-color: #f1f1f1; */
+		background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://s-media-cache-ak0.pinimg.com/736x/6b/13/37/6b1337f5b36738b8d512150675af4b15.jpg') no-repeat center;
+		/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://s-media-cache-ak0.pinimg.com/736x/6b/13/37/6b1337f5b36738b8d512150675af4b15.jpg') no-repeat center; */
+		/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('https://s-media-cache-ak0.pinimg.com/736x/6b/13/37/6b1337f5b36738b8d512150675af4b15.jpg') no-repeat center; */
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://s-media-cache-ak0.pinimg.com/736x/6b/13/37/6b1337f5b36738b8d512150675af4b15.jpg') no-repeat center;
+		background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://s-media-cache-ak0.pinimg.com/736x/6b/13/37/6b1337f5b36738b8d512150675af4b15.jpg') no-repeat center;
+		background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://s-media-cache-ak0.pinimg.com/736x/6b/13/37/6b1337f5b36738b8d512150675af4b15.jpg') no-repeat center;
+		background-size: cover;
+		
+		
+	}
+	
+	.prod1d{
+	/*  background-color: #f1f1f1; */
+		background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://3.bp.blogspot.com/--MRzK0-Irk0/WFxzm_ZFp9I/AAAAAAAAzfk/WXJ9PyUPM_0W7tcNx9dyvDrE_z5W80ggQCEw/s640/haagen-dazs-coffee-ice-cream.jpg') no-repeat center;
+		/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://3.bp.blogspot.com/--MRzK0-Irk0/WFxzm_ZFp9I/AAAAAAAAzfk/WXJ9PyUPM_0W7tcNx9dyvDrE_z5W80ggQCEw/s640/haagen-dazs-coffee-ice-cream.jpg') no-repeat center; */
+		/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('https://3.bp.blogspot.com/--MRzK0-Irk0/WFxzm_ZFp9I/AAAAAAAAzfk/WXJ9PyUPM_0W7tcNx9dyvDrE_z5W80ggQCEw/s640/haagen-dazs-coffee-ice-cream.jpg') no-repeat center; */
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://3.bp.blogspot.com/--MRzK0-Irk0/WFxzm_ZFp9I/AAAAAAAAzfk/WXJ9PyUPM_0W7tcNx9dyvDrE_z5W80ggQCEw/s640/haagen-dazs-coffee-ice-cream.jpg') no-repeat center;
+		background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://3.bp.blogspot.com/--MRzK0-Irk0/WFxzm_ZFp9I/AAAAAAAAzfk/WXJ9PyUPM_0W7tcNx9dyvDrE_z5W80ggQCEw/s640/haagen-dazs-coffee-ice-cream.jpg') no-repeat center;
+		background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://3.bp.blogspot.com/--MRzK0-Irk0/WFxzm_ZFp9I/AAAAAAAAzfk/WXJ9PyUPM_0W7tcNx9dyvDrE_z5W80ggQCEw/s640/haagen-dazs-coffee-ice-cream.jpg') no-repeat center;
+		background-size: cover;
+		
+		
+	}
+	
+	.prod2a{
+	/*  background-color: #f1f1f1; */
+	background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://www.haagen-dazs.ca/sites/default/files/styles/product_main_image/public/hd_gel_capp_500ml_e_3d_500x500.png') no-repeat center;
+	/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://www.haagen-dazs.ca/sites/default/files/styles/product_main_image/public/hd_gel_capp_500ml_e_3d_500x500.png') no-repeat center; */
+	/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('https://www.haagen-dazs.ca/sites/default/files/styles/product_main_image/public/hd_gel_capp_500ml_e_3d_500x500.png') no-repeat center; */
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://www.haagen-dazs.ca/sites/default/files/styles/product_main_image/public/hd_gel_capp_500ml_e_3d_500x500.png') no-repeat center;
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://www.haagen-dazs.ca/sites/default/files/styles/product_main_image/public/hd_gel_capp_500ml_e_3d_500x500.png') no-repeat center;
+	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://www.haagen-dazs.ca/sites/default/files/styles/product_main_image/public/hd_gel_capp_500ml_e_3d_500x500.png') no-repeat center;
+	background-size: 100%;
+}
+
+.prod2b{
+	/*  background-color: #f1f1f1; */
+	background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://3.bp.blogspot.com/-KNgiN79aFhw/UxU8mijV3hI/AAAAAAAAMlw/tXYgByUt9sw/s1600/haagen+daz+gelato+tiramisu+pint+2014.jpg') no-repeat center;
+	/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://3.bp.blogspot.com/-KNgiN79aFhw/UxU8mijV3hI/AAAAAAAAMlw/tXYgByUt9sw/s1600/haagen+daz+gelato+tiramisu+pint+2014.jpg') no-repeat center; */
+	/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('http://3.bp.blogspot.com/-KNgiN79aFhw/UxU8mijV3hI/AAAAAAAAMlw/tXYgByUt9sw/s1600/haagen+daz+gelato+tiramisu+pint+2014.jpg') no-repeat center; */
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://3.bp.blogspot.com/-KNgiN79aFhw/UxU8mijV3hI/AAAAAAAAMlw/tXYgByUt9sw/s1600/haagen+daz+gelato+tiramisu+pint+2014.jpg') no-repeat center;
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://3.bp.blogspot.com/-KNgiN79aFhw/UxU8mijV3hI/AAAAAAAAMlw/tXYgByUt9sw/s1600/haagen+daz+gelato+tiramisu+pint+2014.jpg') no-repeat center;
+	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://3.bp.blogspot.com/-KNgiN79aFhw/UxU8mijV3hI/AAAAAAAAMlw/tXYgByUt9sw/s1600/haagen+daz+gelato+tiramisu+pint+2014.jpg') no-repeat center;
+	background-size: 100%;
+	
+	
+}
+
+.prod2c{
+	/*  background-color: #f1f1f1; */
+	background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.nogarlicnoonions.com/wp-content/uploads/2013/05/Sea-Salt-Caramel.jpg') no-repeat center;
+	/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.nogarlicnoonions.com/wp-content/uploads/2013/05/Sea-Salt-Caramel.jpg') no-repeat center; */
+	/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('http://www.nogarlicnoonions.com/wp-content/uploads/2013/05/Sea-Salt-Caramel.jpg') no-repeat center; */
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.nogarlicnoonions.com/wp-content/uploads/2013/05/Sea-Salt-Caramel.jpg') no-repeat center;
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.nogarlicnoonions.com/wp-content/uploads/2013/05/Sea-Salt-Caramel.jpg') no-repeat center;
+	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.nogarlicnoonions.com/wp-content/uploads/2013/05/Sea-Salt-Caramel.jpg') no-repeat center;
+	background-size: 100%;
+}
+
+.prod2d{
+/*  background-color: #f1f1f1; */
+	background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://foodfetepress.files.wordpress.com/2013/01/haagenstracciatella_14oz_pints_strac.jpg') no-repeat center;
+	/* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://foodfetepress.files.wordpress.com/2013/01/haagenstracciatella_14oz_pints_strac.jpg') no-repeat center; */
+	/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))), url('https://foodfetepress.files.wordpress.com/2013/01/haagenstracciatella_14oz_pints_strac.jpg') no-repeat center; */
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 59%, rgba(0, 0, 0, 1) 100%), url('https://foodfetepress.files.wordpress.com/2013/01/haagenstracciatella_14oz_pints_strac.jpg') no-repeat center;
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://foodfetepress.files.wordpress.com/2013/01/haagenstracciatella_14oz_pints_strac.jpg') no-repeat center;
+	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('https://foodfetepress.files.wordpress.com/2013/01/haagenstracciatella_14oz_pints_strac.jpg') no-repeat center;
+	background-size: 100%;
+	
+	
+}
+
+	.slick-list{
+		padding:0 !important;
+
+	}
+</style>
+<link rel="stylesheet" href="style/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+</head>
+<body></div>
+<section class="mainpage">
+		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
+			<div class="col-xs-2">
+				<a href="#" class="ssm-toggle-nav" title="open nav">
+					<div class="burger">as</div>
+					<div class="burger">as</div>
+					<div class="burger">as</div>
+				</a>
+			</div>
+			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
+				<span>products</span>
+			</div>
+		</section>
+		<section class="contentshop slick-initialized">
+			<div class="sub-header ">
+			  <div class="swipe-tabs">
+				<div class="swipe-tab">Ice Cream</div>
+				<div class="swipe-tab">Gelato</div>
+				<div class="swipe-tab">Bars</div>
+				<div class="swipe-tab">Frozen Yogurt</div>
+				<div class="swipe-tab">Sorbet</div>
+			  </div>
+			</div>
+			<div class="main-container ">
+			  <div class="swipe-tabs-container col-xs-12 no-padding	">
+				<div class="swipe-tab-content">
+					<div class="col-xs-6 products prod1a">
+						<h4>Choco Butter</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1b">
+						<h4>Caramel</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1c">
+						<h4>Choco</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1d">
+						<h4>Cheese Butter</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+				</div>
+				<div class="swipe-tab-content">
+					<div class="swipe-tab-content">
+						<div class="col-xs-6 products prod2a">
+							<h4>Cappucino</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+						<div class="col-xs-6 products prod2b">
+							<h4>Tiramisu</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+						<div class="col-xs-6 products prod2c">
+							<h4>Sea Salt Caramel</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+						<div class="col-xs-6 products prod2d">
+							<h4>Stracciatella</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="swipe-tab-content">
+					<div class="col-xs-6 products prod1a">
+						<h4>Choco Butter</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1b">
+						<h4>Caramel</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1c">
+						<h4>Choco</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1d">
+						<h4>Cheese Butter</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+				</div>
+				<div class="swipe-tab-content"><div class="swipe-tab-content">
+						<div class="col-xs-6 products prod2a">
+							<h4>Cappucino</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+						<div class="col-xs-6 products prod2b">
+							<h4>Tiramisu</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+						<div class="col-xs-6 products prod2c">
+							<h4>Sea Salt Caramel</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+						<div class="col-xs-6 products prod2d">
+							<h4>Stracciatella</h4>
+							<a href="details.html"><button>Buy Now</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="swipe-tab-content">
+					<div class="col-xs-6 products prod1a">
+						<h4>Choco Butter</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1b">
+						<h4>Caramel</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1c">
+						<h4>Choco</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+					<div class="col-xs-6 products prod1d">
+						<h4>Cheese Butter</h4>
+						<a href="details.html"><button>Buy Now</button></a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</section>
+        <nav class="nav" style="padding: 13px 21px;">
+            <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
+            
+			<a href="shop.html"><p>Ice Cream</p></a>
+			<a href="shop.html"><p>Gelato</p></a>
+			<a href="shop.html"><p>Bars</p></a>
+			<a href="shop.html"><p>Frozen Yogurt</p></a>
+			<a href="shop.html"><p>Sorbet</p></a>
+			
+        </nav>
+      </section>
+	<div class="ssm-overlay ssm-toggle-nav"></div>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- touchSwipe library -->
+<script>
+	$(document).ready(function() {
+		$('.nav').slideAndSwipe();
+		
+		var buka=0;
+		
+		$(".ssm-toggle-nav").click(function(){
+			 //$( ".contenthome" ).fadeToggle( "fast", "linear");
+			//$(".header").slideToggle( "fast");
+		});
+	});
+</script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+  'use strict';
+  
+  var $swipeTabsContainer = $('.swipe-tabs'),
+    $swipeTabs = $('.swipe-tab'),
+    $swipeTabsContentContainer = $('.swipe-tabs-container'),
+    currentIndex = 0,
+    activeTabClassName = 'active-tab';
+
+  $swipeTabsContainer.on('init', function(event, slick) {
+    $swipeTabsContentContainer.removeClass('invisible');
+    $swipeTabsContainer.removeClass('invisible');
+
+    currentIndex = slick.getCurrent();
+    $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+  });
+
+  $swipeTabsContainer.slick({
+    //slidesToShow: 3.25,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: false,
+    swipeToSlide: true,
+    touchThreshold: 10,
+    animating: false,
+    focusOnSelect: true,
+    fade: false,
+
+  });
+
+   $swipeTabsContentContainer.slick({
+    asNavFor: $swipeTabsContainer,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: false,
+    animating: false,
+    //vertical: false,
+    //verticalSwiping: false,
+    //speed:1,
+    fade: false,
+    lazyLoad: 'ondemand',
+    swipeToSlide: true,
+    draggable: false,
+    touchThreshold: 5,
+    variableWidth: false,
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: '1px',
+  });
+
+
+  $swipeTabs.on('click', function(event) {
+        // gets index of clicked tab
+        currentIndex = $(this).data('slick-index');
+        $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex +']').addClass(activeTabClassName);
+        $swipeTabsContainer.slick('slickGoTo', currentIndex);
+        $swipeTabsContentContainer.slick('slickGoTo', currentIndex);
+   
+    });
+
+    //initializes slick navigation tabs swipe handler
+    $swipeTabsContentContainer.on('swipe', function(event, slick, direction) {
+      currentIndex = $(this).slick('slickCurrentSlide');
+    $(".img-responsive")
+         
+    $swipeTabs.removeClass(activeTabClassName);
+    $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+  });
+  
+  
+});
+</script>
+<script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
