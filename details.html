@@ -7,220 +7,11 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<style>
-	.mainpage{
-		
-		margin: 0;
-		height:98%;
-	}
-
-	.burger{
-		border-radius:5px;
-		background:white;
-		width:21px;
-		height:3px;
-		margin:6px;
-		color:rgba(0,0,0,0);
-	}
-	
-	a{
-		text-decoration:none;
-	}
-	
-	.header img{
-		max-width: 100%;
-		width: 30%;
-		/* position: absolute; */
-		margin: -13% 0 -27px -6%;
-	}
-	
-	.contentshop {
-		width: 100%;
-		margin-top: 0px;
-		color: black;
-		min-height: 91.5%;
-		
-	}
-	
-	
-	
-	nav {
-		height: 100%;
-		width: 280px;
-		background-color: rgba(27,27,27,.9);
-		left: 0;
-		top: 0;
-		z-index: 2;
-		position: fixed;
-		overflow-y: auto;
-		overflow-x: visible;
-		
-		text-align:left;
-		transform: translate(-280px,0);
-	}
-	.ssm-overlay {
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-color: rgba(0,0,0,0.2);
-		display: none;
-		z-index: 1;
-	}
-	.is-navOpen{
-	  overflow: hidden;
-	}
-
-	nav.nav {
-		color: #fff;
-		line-height:1.2em;
-		font-size:16pt;
-	}
-
-	html,
-	body {
-		height: 100%;
-	}
-
-	body {
-	   
-		font-family: 'Open Sans';
-		color: #333;
-		margin: 0;
-		text-align: center;
-	}
-	
-	
-	footer{
-	font-size:8pt;
-	color:white;
-	background:#020100;
-	text-align:center;
-	padding-bottom:10px;
-}
-	.no-padding{
-		padding:0 !important;
-		margin: 0 !important;
-	}
-
-	.outer {
-    width: 100%;
-    max-height:50vh;
-    overflow: hidden;
-}
-
-.inner {
-    display: inline-block;
-    position: relative;
-    right: -50%;
-}
-
-.inner img {
-    position: relative;
-    left: -50%;
-}
-
-.title{
-	font-size:10pt;
-	padding-top:10px;
-	font-weight:bold;
-}
-
-.price{
-	font-size:22pt;
-	font-weight:400;
-	color:#DFB866;
-}
-
-.desc{
-	padding:2% 10%;
-	font-size:9pt;
-}
-
-.opt{
-	margin-top:20px;
-	font-size:8pt;
-	
-}
-
-
-
-.align-left{
-	text-align:left;
-}
-
-.align-right{
-	text-align:right;
-}
-
-.details button{
-	width:40%;
-	padding:8px;
-	background:#DFB866;
-	border:none;
-	font-size:9pt;
-	font-weight:bold;
-	margin-top:20px;
-	color:white;
-}
-
-
-/* end only demo styles */
-
-.checkbox-custom, .radio-custom {
-    opacity: 0;
-    position: absolute;   
-}
-
-.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
-    display: inline;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-.checkbox-custom-label, .radio-custom-label {
-    position: relative;
-}
-
-.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
-    content: '';
-    background: #fff;
-    border: 2px solid #ddd;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-.checkbox-custom:checked + .checkbox-custom-label:before {
-    content: "\f00c";
-    font-family: 'FontAwesome';
-    background: rebeccapurple;
-    color: #fff;
-}
-
-.radio-custom + .radio-custom-label:before {
-    border-radius: 50%;
-}
-
-.radio-custom:checked + .radio-custom-label:before {
-    content: "\f00c";
-    font-family: 'FontAwesome';
-    color: #bbb;
-}
-
-.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
-  outline: 1px solid #ddd; /* focus style */
-}
-</style>
-
+<link href="style/style.css" rel="stylesheet">
+<link href="style/products.css" rel="stylesheet">
 </head>
 <body></div>
-<section class="mainpage">
+<section class="shoppage">
 		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
 			<div class="col-xs-2">
 				<a href="#" class="ssm-toggle-nav" title="open nav">
@@ -285,7 +76,7 @@
 								<input value="0" class="sl-qty" name="day" style="position:absolute;display:inline; width:26%; background:none; font-size:4vw; height:20px; text-align:center; border:none;" disabled />
 								<img src="img/plus.png" style="position:absolute; display:inline; cursor:pointer; left:44px;" onclick="var el = $(this).siblings('input')[0]; el.value = Math.min(__max, parseInt(el.value)+1)" width="20%" />                      
 						</div>
-						<button>BUY NOW</button>
+						<a href="cart.html"><button>BUY NOW</button></a>
 					</div>
 				</div>
 			</div>
@@ -293,11 +84,12 @@
         <nav class="nav" style="padding: 13px 21px;">
             <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
             
-			<p>Ice Cream</p>
-			<p>Gelato</p>
-			<p>Bars</p>
-			<p>Frozen Yogurt</p>
-			<p>Sorbet</p>
+			<a href="shop.html"><p>Shop</p></a>
+			<a href="profile.html"><p>Profile</p></a>
+			<a href="redeem.html"><p>Redeem</p></a>
+			<a href="cart.html"><p>Cart</p></a>
+			<a href="game.html"><p>Play CloudJump</p></a>
+			<a href="news.html"><p>News</p></a>
 			
         </nav>
       </section>
