@@ -10,25 +10,20 @@
 <link href="style/style.css" rel="stylesheet">
 <link href="style/products.css" rel="stylesheet">
 <style>
-#examples {
-	padding-top:7px;
+.game {
+	position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0px;
+    height: 93.6vh;
+    overflow: hidden;
+	outline:none;
 }
 
-#examples a {
-  text-decoration: underline;
-}
-
-#geocomplete { width: 200px}
-
-.map_canvas { 
-  width: 100%; 
-  height: 87.7vh; 
-  margin: 10px 20px 0px 0;
-}
-
-#multiple li { 
-  cursor: pointer; 
-  text-decoration: underline; 
+.game iframe{
+	width:101%;
+	height:100vh;
+	background:#B23561;
+	padding:0 !important;
 }
 </style>
 </head>
@@ -43,22 +38,11 @@
 				</a>
 			</div>
 			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>nearby store</span>
+				<span>Play CloudJump</span>
 			</div>
 		</section>
-		<section class="store">
-			<form style="display:none;">
-			  <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
-			  <input id="find" type="button" value="find" />
-			</form>
-			<div id="examples">
-			  Choose City :
-			  <a href="#">Jakarta</a>
-			  <a href="#">Bandung</a>
-			  <a href="#">Bali</a>
-			  <a href="#">Surabaya</a>
-			</div>
-			<div class="map_canvas"></div>    
+		<section class="game">
+			<iframe src="game.html"></iframe>
 		</section>
         <nav class="nav" style="padding: 13px 21px;">
             <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
@@ -89,37 +73,12 @@
 			//$(".header").slideToggle( "fast");
 		});
 		
-		// GEO LOCATION //
-		 var options = {
-          map: ".map_canvas"
-        };
-        
-        $("#geocomplete").geocomplete(options)
-          .bind("geocode:result", function(event, result){
-            $.log("Result: " + result.formatted_address);
-          })
-          .bind("geocode:error", function(event, status){
-            $.log("ERROR: " + status);
-          })
-          .bind("geocode:multiple", function(event, results){
-            $.log("Multiple: " + results.length + " results found");
-          });
-        
-        $("#find").click(function(){
-          $("#geocomplete").trigger("geocode");
-        });
-        
-        $("#examples a").click(function(){
-          $("#geocomplete").val($(this).text()).trigger("geocode");
-          return false;
-        });
+		
 		
 	});
 	var __min = 0;
 		var __max = 10;
 </script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
 <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 <script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
