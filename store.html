@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<title>Haagen Daaz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="">
+<link rel="canonical" href="">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href="style/style.css" rel="stylesheet">
+<link href="style/products.css" rel="stylesheet">
+<style>
+#examples {
+	padding-top:7px;
+}
+
+#examples a {
+  text-decoration: underline;
+}
+
+#geocomplete { width: 200px}
+
+.map_canvas { 
+  width: 100%; 
+  height: 87.7vh; 
+  margin: 10px 20px 0px 0;
+}
+
+#multiple li { 
+  cursor: pointer; 
+  text-decoration: underline; 
+}
+</style>
+</head>
+<body></div>
+<section class="shoppage">
+		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
+			<div class="col-xs-2">
+				<a href="#" class="ssm-toggle-nav" title="open nav">
+					<div class="burger">as</div>
+					<div class="burger">as</div>
+					<div class="burger">as</div>
+				</a>
+			</div>
+			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
+				<span>nearby store</span>
+			</div>
+		</section>
+		<section class="store">
+			<form style="display:none;">
+			  <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
+			  <input id="find" type="button" value="find" />
+			</form>
+			<div id="examples">
+			  Choose City :
+			  <a href="#">Jakarta</a>
+			  <a href="#">Bandung</a>
+			  <a href="#">Bali</a>
+			  <a href="#">Surabaya</a>
+			</div>
+			<div class="map_canvas"></div>    
+		</section>
+        <nav class="nav" style="padding: 13px 21px;">
+            <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
+            
+			<a href="shop.html"><p>Shop</p></a>
+			<a href="profile.html"><p>Profile</p></a>
+			<a href="redeem.html"><p>Redeem</p></a>
+			<a href="cart.html"><p>Cart</p></a>
+			<a href="store.html"><p>Store</p></a>
+			<a href="game/index.html"><p>Play CloudJump</p></a>
+			<a href="news.html"><p>News</p></a>
+			
+        </nav>
+      </section>
+	<div class="ssm-overlay ssm-toggle-nav"></div>
+
+<script src="https://use.fontawesome.com/6fac2730d4.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- touchSwipe library -->
+<script>
+	$(document).ready(function() {
+		$('.nav').slideAndSwipe();
+		
+		var buka=0;
+		
+		$(".ssm-toggle-nav").click(function(){
+			 //$( ".contenthome" ).fadeToggle( "fast", "linear");
+			//$(".header").slideToggle( "fast");
+		});
+		
+		// GEO LOCATION //
+		 var options = {
+          map: ".map_canvas"
+        };
+        
+        $("#geocomplete").geocomplete(options)
+          .bind("geocode:result", function(event, result){
+            $.log("Result: " + result.formatted_address);
+          })
+          .bind("geocode:error", function(event, status){
+            $.log("ERROR: " + status);
+          })
+          .bind("geocode:multiple", function(event, results){
+            $.log("Multiple: " + results.length + " results found");
+          });
+        
+        $("#find").click(function(){
+          $("#geocomplete").trigger("geocode");
+        });
+        
+        $("#examples a").click(function(){
+          $("#geocomplete").val($(this).text()).trigger("geocode");
+          return false;
+        });
+		
+	});
+	var __min = 0;
+		var __max = 10;
+</script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+<script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+<script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
