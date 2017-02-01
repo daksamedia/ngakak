@@ -28,6 +28,9 @@
 </style>
 </head>
 <body></div>
+<section class="loading">
+	<img src="img/loading.gif" width="20%" />
+</section>
 <section class="shoppage">
 		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
 			<div class="col-xs-2">
@@ -78,6 +81,15 @@
 	});
 	var __min = 0;
 		var __max = 10;
+</script>
+<script>
+$(".loading").show();
+$(".mainpage").hide();
+$(document).ready(function() {
+	
+	$(".loading").hide();
+	$(".mainpage").show();
+});
 </script>
 <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 <script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>

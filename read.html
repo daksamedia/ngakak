@@ -9,28 +9,7 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <link href="style/style.css" rel="stylesheet">
 <link href="style/products.css" rel="stylesheet">
-<style>
-#examples {
-	padding-top:7px;
-}
 
-#examples a {
-  text-decoration: underline;
-}
-
-#geocomplete { width: 200px}
-
-.map_canvas { 
-  width: 100%; 
-  height: 87.7vh; 
-  margin: 10px 20px 0px 0;
-}
-
-#multiple li { 
-  cursor: pointer; 
-  text-decoration: underline; 
-}
-</style>
 </head>
 <body></div>
 <section class="loading">
@@ -46,22 +25,33 @@
 				</a>
 			</div>
 			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>kota kasablanka</span>
+				<span>news</span>
 			</div>
 		</section>
-		<section class="store">
-			<form style="display:none;">
-			  <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
-			  <input id="find" type="button" value="find" />
-			</form>
-			<div id="examples">
-			  Choose City :
-			  <a href="#">Jakarta</a>
-			  <a href="#">Bandung</a>
-			  <a href="#">Bali</a>
-			  <a href="#">Surabaya</a>
+		<section class="news">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 no-padding newsitem">
+						<img style="margin: 0 0 5px 0 !important;" src="https://www.haagendazs.us/media/1423/hd_newstrio_familypackheadershot_cropped_01.jpg" class="img-responsive" />
+						<div style="margin-top: 2px; margin-bottom: 10px; text-align: left;" class="col-xs-12 newscontent">
+							
+							<h3>discover layer upon layer of our New TRIO Ice Cream</h3>
+							<P style="">introducing the Häagen-Dazs TRIO collection. Inside crispy bites of rich Belgian chocolate are layered between inspired pairings of velvety ice cream for a first-of-its-kind experience.
+							<br /><br />
+							introducing the Häagen-Dazs TRIO collection. Inside every carton is an extraordinary combination of tastes and textures – from classic, crispy and rich to salty, crunchy and sweet. dip your spoon into layers of unexpected indulgence with our four new TRIO flavors:
+							<br>
+							<ul style="list-style: circle;">
+								<li>triple chocolate</li>
+								<li>salted caramel chocolate</li>
+								<li>coffee vanilla chocolate</li>
+								<li>vanilla blackberry chocolate</li>
+							</ul>
+							<button style="background: #E3B75B; color: black; border: none; padding: 4px; width: 100%;">Share this</button>
+						</div>						
+					</div>
+										
+				</div>
 			</div>
-			<div class="map_canvas"></div>    
 		</section>
         <nav class="nav" style="padding: 13px 21px;">
             <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
@@ -86,40 +76,7 @@
 		$('.nav').slideAndSwipe();
 		
 		var buka=0;
-		
-		$(".ssm-toggle-nav").click(function(){
-			 //$( ".contenthome" ).fadeToggle( "fast", "linear");
-			//$(".header").slideToggle( "fast");
-		});
-		
-		// GEO LOCATION //
-		 var options = {
-          map: ".map_canvas"
-        };
-        
-        $("#geocomplete").geocomplete(options)
-          .bind("geocode:result", function(event, result){
-            $.log("Result: " + result.formatted_address);
-          })
-          .bind("geocode:error", function(event, status){
-            $.log("ERROR: " + status);
-          })
-          .bind("geocode:multiple", function(event, results){
-            $.log("Multiple: " + results.length + " results found");
-          });
-        
-        $("#find").click(function(){
-          $("#geocomplete").trigger("geocode");
-        });
-        
-        $("#examples a").click(function(){
-          $("#geocomplete").val($(this).text()).trigger("geocode");
-          return false;
-        });
-		
-	});
-	var __min = 0;
-		var __max = 10;
+		})
 </script>
 <script>
 $(".loading").show();

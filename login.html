@@ -12,59 +12,39 @@
 </style>
 </head>
 <body></div>
-<section class="homepage">
-	<img src="logo-head.png" width="40%" />
+<section class="loginarea">
+	<img src="logo-head.png" width="40%" style="margin-top:12px;" />
 	<div class="clearfix"></div>
 	<div class="col-xs-12 loads">
 		Loading...
 	</div>
-	<div class="col-xs-6 no-padding signup" style="text-align:right">
-		<button style="margin-right:4px;">Sign up</button>
+	
+	<div class="col-xs-12 no-padding" style="text-align:center; ">
+		<input type="text" class="email" style="width:90%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="Email address..."  />		
+		<input type="password" class="pass" style="width:90%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="Password..."  />		
+		<button class="login" style="border:white 1px solid; width:60%; padding:4px; background:none; margin-top:12px;">Login</button>
+		<p class="reg">Not registered yet? <a href="register.html" style="color:#f2bf0e"> Sign Up Here</a></p>
+		<p class="for">Forgot Password?<a href="register.html" style="color:#f2bf0e"> Click Here</a></p>
 	</div>
-	<div class="col-xs-6 no-padding login" style="text-align:left">
-		<button style="margin-left:4px;">Login</button>
-	</div>
-	<div class="col-xs-12 no-padding signfb"> 
-		<p>or</p>
-		<img src="http://www.jombiz.com/fb/assets/img/facebook-login-button.png" width="40%">
-		
-	</div>
-	<a href="">
-		<div class="col-xs-12" style="opacity:0; height:20vh; background:#ccc">
-			touch
-		</div>
-	</a>
+	
 </section>
 <footer>&copy; 2007 Haagen-Daaz Coorporation all right reserved.</footer>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	$(".signup").click(function(){
-		$(this).hide();
-		$(".login").hide();
-		$(".signfb").hide();
-		$(".loads").show();
-		var delay = 1000; //Your delay in milliseconds
-		setTimeout(function(){ window.location = "register.html"; }, delay);
-	});
 	
 	$(".login").click(function(){
 		$(this).hide();
-		$(".signup").hide();
-		$(".signfb").hide();
-		$(".loads").show();
-		var delay = 1000; //Your delay in milliseconds
-		setTimeout(function(){ window.location = "login.html"; }, delay);
-	});
-	
-	$(".signfb").click(function(){
-		$(this).hide();
-		$(".login").hide();
-		$(".signup").hide();
+		$(".reg").hide();
+		$(".for").hide();
+		$(".email").hide();
+		$(".pass").hide();
 		$(".loads").show();
 		var delay = 1000; //Your delay in milliseconds
 		setTimeout(function(){ window.location = "home.html"; }, delay);
 	});
+	
+	
 });
 </script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<title>Haagen Daaz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="">
+<link href="style/style.css" rel="stylesheet">
+<link rel="canonical" href="">
+<style>
+.loads{
+	display:none;
+}
+</style>
+</head>
+<body></div>
+<section class="regisarea">
+	<img src="logo-head.png" width="40%" style="margin-top:12px;" />
+	<div class="clearfix"></div>
+	<div class="col-xs-12 loads">
+		Loading...
+	</div>
+	
+	<div class="col-xs-12 no-padding forms" style="text-align:center; font-weight:bold; ">
+		<input type="text" style="width:90%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="Name..."  />		
+		<input type="text" style="width:90%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="Email address..."  />		
+		<input type="password" style="width:90%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="Password..."  />		
+		<input type="password" style="width:90%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="Retype Password..."  />		
+		<div class="col-xs-6 no-padding">
+			<input type="text" style="width:80%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="No. Handphone..."  />		
+		</div>
+		<div class="col-xs-6 no-padding">
+			<input type="text" style="width:80%; border-top:none; border-left:none; border-right:none; border-bottom: white 1px solid; padding:4px; background:none; margin-bottom:15px;" placeholder="City..."  />		
+		</div>
+	</div>
+	<div class="col-xs-12 no-padding" style="text-align:center;">
+		<button class="signup" style="border:white 1px solid; width:60%; padding:4px; background:none; margin-top:12px;">Register</button>
+		<p class="log">Already registered? <a href="login.html" style="color:#f2bf0e"> Login Here</a></p>
+				
+	</div>
+	
+</section>
+<footer>&copy; 2007 Haagen-Daaz Coorporation all right reserved.</footer>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".signup").click(function(){
+		$(this).hide();
+		$(".forms").hide();
+		$(".log").hide();
+		$(".signup").hide();
+		$(".loads").show();
+		var delay = 1000; //Your delay in milliseconds
+		setTimeout(function(){ window.location = "home.html"; }, delay);
+	});
+	
+	
+});
+</script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

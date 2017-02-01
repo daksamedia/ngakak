@@ -9,28 +9,7 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <link href="style/style.css" rel="stylesheet">
 <link href="style/products.css" rel="stylesheet">
-<style>
-#examples {
-	padding-top:7px;
-}
 
-#examples a {
-  text-decoration: underline;
-}
-
-#geocomplete { width: 200px}
-
-.map_canvas { 
-  width: 100%; 
-  height: 87.7vh; 
-  margin: 10px 20px 0px 0;
-}
-
-#multiple li { 
-  cursor: pointer; 
-  text-decoration: underline; 
-}
-</style>
 </head>
 <body></div>
 <section class="loading">
@@ -46,22 +25,38 @@
 				</a>
 			</div>
 			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>kota kasablanka</span>
+				<span>news</span>
 			</div>
 		</section>
-		<section class="store">
-			<form style="display:none;">
-			  <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
-			  <input id="find" type="button" value="find" />
-			</form>
-			<div id="examples">
-			  Choose City :
-			  <a href="#">Jakarta</a>
-			  <a href="#">Bandung</a>
-			  <a href="#">Bali</a>
-			  <a href="#">Surabaya</a>
+		<section class="news">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 no-padding newsitem">
+						<div style="margin-top: 20px; margin-bottom: 20px; text-align: left;" class="col-xs-12 newscontent">
+							<img src="https://www.haagendazs.us/media/1423/hd_newstrio_familypackheadershot_cropped_01.jpg" class="img-responsive" />
+							<h3>discover layer upon layer of our New TRIO Ice Cream</h3>
+							<P style="max-height: 10vh; overflow: hidden;">introducing the Häagen-Dazs TRIO collection. Inside every carton is an extraordinary combination of tastes and textures – from classic....</P>
+							<a href="read.html"><button style="background: #E3B75B; color: black; border: none; padding: 4px; width: 100%;">Read more</button></a>
+						</div>						
+					</div>
+					<div class="col-xs-12 no-padding newsitem">
+						<div style="margin-top: 20px; margin-bottom: 20px; text-align: left;" class="col-xs-12 newscontent">
+							<img src="https://www.haagendazs.us/media/1011/the-official-ice-cream-of-the-museum-of-food-and-drink-hero.png" class="img-responsive" />
+							<h3>the official ice cream of the museum of food and drink</h3>
+							<P style="max-height: 10vh; overflow: hidden;">The Häagen-Dazs® brand is proud to be chosen as the official ice cream of the Museum of Food and Drink (MOFAD), an innovative culinary institution that shares our enthusiasm, excitement and heart for the culture, history and science of</P>
+							<a href="read.html"><button style="background: #E3B75B; color: black; border: none; padding: 4px; width: 100%;">Read more</button></a>
+						</div>						
+					</div>
+					<div class="col-xs-12 no-padding newsitem">
+						<div style="margin-top: 20px; margin-bottom: 20px; text-align: left;" class="col-xs-12 newscontent">
+							<img src="https://www.haagendazs.us/media/1009/newyearnewflavors_header.jpg" class="img-responsive" />
+							<h3>new year, new flavors</h3>
+							<P style="max-height: 10vh; overflow: hidden;">whether it’s an enticing ingredient or a captivating crunch, we’re endlessly searching for the spark of a new flavor. this year, we scoured the globe and found the inspiration for seven exotic new tastes. </P>
+							<a href="read.html"><button style="background: #E3B75B; color: black; border: none; padding: 4px; width: 100%;">Read more</button></a>
+						</div>						
+					</div>					
+				</div>
 			</div>
-			<div class="map_canvas"></div>    
 		</section>
         <nav class="nav" style="padding: 13px 21px;">
             <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
@@ -86,40 +81,7 @@
 		$('.nav').slideAndSwipe();
 		
 		var buka=0;
-		
-		$(".ssm-toggle-nav").click(function(){
-			 //$( ".contenthome" ).fadeToggle( "fast", "linear");
-			//$(".header").slideToggle( "fast");
-		});
-		
-		// GEO LOCATION //
-		 var options = {
-          map: ".map_canvas"
-        };
-        
-        $("#geocomplete").geocomplete(options)
-          .bind("geocode:result", function(event, result){
-            $.log("Result: " + result.formatted_address);
-          })
-          .bind("geocode:error", function(event, status){
-            $.log("ERROR: " + status);
-          })
-          .bind("geocode:multiple", function(event, results){
-            $.log("Multiple: " + results.length + " results found");
-          });
-        
-        $("#find").click(function(){
-          $("#geocomplete").trigger("geocode");
-        });
-        
-        $("#examples a").click(function(){
-          $("#geocomplete").val($(this).text()).trigger("geocode");
-          return false;
-        });
-		
-	});
-	var __min = 0;
-		var __max = 10;
+		})
 </script>
 <script>
 $(".loading").show();
