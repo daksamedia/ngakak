@@ -36,16 +36,27 @@ body {
 	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 1) 100%), url('http://www.champselysees-paris.com/images/restaurant-images/home_haagen_dazs_fev_2012_hp_997485720.jpeg') no-repeat center;
 	background-size: cover;
 	margin: 0;
-	height:98%;
+	height:96%;
 	display:none;
 }
 
+.main-image{
+	width: 100%;
+	overflow: hidden;
+	height: 200px;
+}
 
 /* SHOP BEGIN */	
 .shoppage{
 		
 	margin: 0;
-	height:98%;
+	padding-top:40px;
+}
+
+.newspage{
+		
+	margin: 0;
+	padding-top:20px;
 }
 
 
@@ -62,7 +73,7 @@ body {
 		height:43vh;
 		text-align:center;
 		color:white;
-		padding-top:53%;
+		padding-top:42%;
 	}
 	
 .products button{
@@ -245,12 +256,36 @@ a{
 	text-align:right;
 }
 
+.header{
+	position:fixed;
+	z-index:9999;
+}
+
 .header img{
 	max-width: 100%;
 	width: 30%;
-	/* position: absolute; */
-	margin: -13% 0 -27px -7%;
+	margin-top:-29px;
 }
+
+.header .cart{
+	position:relative;
+	background-image:url(../img/cart.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:right center;
+	height:100%;
+	text-align:right;
+}
+.header .cart-count{
+	position:absolute;
+	top:3px;
+	right:-7px;
+	border-radius:8px;
+	padding:0px 8px;
+	background:#f00;
+	color:#fff;
+}
+
 
 .contenthome {
 	width: 100%;
@@ -279,7 +314,7 @@ nav {
 	background-color: rgba(27,27,27,.9);
 	left: 0;
 	top: 0;
-	z-index: 2;
+	z-index: 999999;
 	position: fixed;
 	overflow-y: auto;
 	overflow-x: visible;
@@ -319,7 +354,23 @@ nav.nav {
   overflow: hidden;
 }
 
-
+.nav .current-user{
+	margin-bottom:20px;
+}
+.nav .current-user-data{
+	float:left;
+	padding-left:50px;
+}
+.nav .current-user-data h3{
+	font-size:14px;
+	margin-top:5px;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+.nav .current-user-data p{
+	font-size:11px;
+	line-height:1;
+}
 
 /* NAV MENU END */
 
@@ -394,7 +445,7 @@ nav.nav {
 
 /* START REGIS PAGE */
 .regisarea{
-	padding-top:20%;
+	padding-top:15%;
 	background:url(../img/bg.jpg) no-repeat center;
 	background-size:cover;
 	height:96vh;
@@ -417,7 +468,30 @@ nav.nav {
 	display:none;
 }
 
+
 /* end regis */
+
+/* store */
+.store{
+	padding: 5px;	
+}
+
+.store a{
+	color:black;
+	text-decoration: none;
+}
+
+.store a:hover{
+	text-decoration: none;
+}
+
+.store table.contacts{
+	width:100%;
+}
+.store table.contacts td{
+	padding:2px;
+	text-align:left;
+}
 
 footer{
 	font-size:8pt;
@@ -430,4 +504,20 @@ footer{
 .no-padding{
 	margin:0 !important;
 	padding:0 !important;
+}
+
+
+/* ICON SETS */
+.icon-set{
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+	background-position:middle;
+	background-size:contain;
+}
+.phone{
+	background-image:url('../img/phone.png');
+}
+.mail{
+	background-image:url('../img/mail.png');
 }

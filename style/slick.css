@@ -1,6 +1,6 @@
 .slick-initialized .swipe-tab-content {
   position: relative;
-  height:85.7vh;
+  min-height:85.7vh;
 }
 @media screen and (min-width: 767px) {
   .slick-initialized .swipe-tab-content {
