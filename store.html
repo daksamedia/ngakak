@@ -36,45 +36,69 @@
 <section class="loading">
 	<img src="img/loading.gif" width="20%" />
 </section>
+<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px;">
+	<div class="col-xs-2">
+		<a href="#" class="ssm-toggle-nav" title="open nav">
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+		</a>
+	</div>
+	<div class="col-xs-8" style="text-align:left; padding-top:6px; color:white;">
+		<span>Kota Kasablanka</span>
+	</div>
+	<div class="col-xs-2" style="height:100%; padding-left:0px;">
+		<a href="cart.html">
+			<div class="cart"><span class="cart-count">2</span></div>
+		</a>
+	</div>
+</section>
+<nav class="nav" style="padding: 13px 21px;">
+	<img src="logo-head.png" width="23%" style="margin-bottom:30px" alt="swipe image" />
+	
+	<div class="current-user">
+		<div class="current-user-data">
+			<h3><a href="profile.html">Agus Supriyadi</a></h3>
+			<p>Your points: 9999</p>
+		</div>
+		<div class="avatar" style="width:40px; height:40px;"></div>
+		<div style="clear:both"></div>
+	</div>
+	
+	<a href="shop.html"><p>Catalog</p></a>
+	<a href="outlet.html"><p>Directory</p></a>
+	<a href="games.html"><p>Game</p></a>
+	<a href="news.html"><p>News</p></a>		
+</nav>
 <section class="shoppage">
-		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
-			<div class="col-xs-2">
-				<a href="#" class="ssm-toggle-nav" title="open nav">
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-				</a>
-			</div>
-			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>kota kasablanka</span>
-			</div>
-		</section>
 		<section class="store">
-			<form style="display:none;">
-			  <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
-			  <input id="find" type="button" value="find" />
-			</form>
-			<div id="examples">
-			  Choose City :
-			  <a href="#">Jakarta</a>
-			  <a href="#">Bandung</a>
-			  <a href="#">Bali</a>
-			  <a href="#">Surabaya</a>
-			</div>
-			<div class="map_canvas"></div>    
-		</section>
-        <nav class="nav" style="padding: 13px 21px;">
-            <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
-            
-			<a href="shop.html"><p>Shop</p></a>
-			<a href="profile.html"><p>Profile</p></a>
-			<a href="redeem.html"><p>Redeem</p></a>
-			<a href="cart.html"><p>Cart</p></a>
-			<a href="outlet.html"><p>Store</p></a>
-			<a href="news.html"><p>News</p></a>
-			<a href="game/index.html"><p>Play CloudJump</p></a>
+			<!--<div class="main-image">
+				<img src="https://media.foody.id/res/g1/1441/s/foody-haagen-dazs-kota-kasablanka-122-635836289991994182.jpg" alt="" style="width:100%" />
+			</div>-->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d833.8129279473221!2d106.84219896121859!3d-6.223446465915506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4ca448cc277e7f5b!2sHaagen-Dazs!5e0!3m2!1sid!2s!4v1486180946429" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<h3>Kota Kasablanka Store</h3>
+			<p class="address" style="text-align: left">
+				Kota Kasablanka, Lantai Ground, Food Society, Jl. Casablanca Raya, Tebet, Jakarta
+			</p>
+			<table class="contacts" style="text-align: left;">
+				<tr>
+					<td><div>Open hours</div></td>
+					<td>10.00 AM - 10-00 PM</td>
+				</tr>
+				<tr>
+					<td><div class="icon-set phone"></div></td>
+					<td><a href="tel:02129488494">021-29488494</a></td>
+				</tr>
+				<tr>
+					<td><div class="icon-set mail"></div></td>
+					<td><a href="mailto:kasablanka@haagendazsindonesia.com">kasablanka@haagendazsindonesia.com</a></td>
+				</tr>
+			</table>
 			
-        </nav>
+			<!--<div id="map" style="width:100%; height:130px;"></div>-->
+			
+			<div style="height:20px"></div>
+		</section>
       </section>
 	<div class="ssm-overlay ssm-toggle-nav"></div>
 
@@ -82,6 +106,14 @@
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- touchSwipe library -->
 <script>
+	/*var map;
+	function initMap() {
+		map = new google.maps.Map(document.getElementById('map'), {
+		center: {lat: -6.2238712, lng: 106.8405484},
+		zoom: 80
+		});
+	}*/
+
 	$(document).ready(function() {
 		$('.nav').slideAndSwipe();
 		
@@ -92,30 +124,7 @@
 			//$(".header").slideToggle( "fast");
 		});
 		
-		// GEO LOCATION //
-		 var options = {
-          map: ".map_canvas"
-        };
-        
-        $("#geocomplete").geocomplete(options)
-          .bind("geocode:result", function(event, result){
-            $.log("Result: " + result.formatted_address);
-          })
-          .bind("geocode:error", function(event, status){
-            $.log("ERROR: " + status);
-          })
-          .bind("geocode:multiple", function(event, results){
-            $.log("Multiple: " + results.length + " results found");
-          });
-        
-        $("#find").click(function(){
-          $("#geocomplete").trigger("geocode");
-        });
-        
-        $("#examples a").click(function(){
-          $("#geocomplete").val($(this).text()).trigger("geocode");
-          return false;
-        });
+		
 		
 	});
 	var __min = 0;
@@ -130,11 +139,11 @@ $(document).ready(function() {
 	$(".shoppage").show();
 });
 </script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
 <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 <script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT1YA4zckL6rz_HspOP3qyKpOcW86OJIw&callback=initMap" async defer></script>
 </body>
 </html>

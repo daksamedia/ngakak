@@ -14,19 +14,42 @@
 <section class="loading">
 	<img src="img/loading.gif" width="20%" />
 </section>
+<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px;">
+	<div class="col-xs-2">
+		<a href="#" class="ssm-toggle-nav" title="open nav">
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+		</a>
+	</div>
+	<div class="col-xs-8" style="text-align:left; padding-top:6px; color:white;">
+		<span>Cart</span>
+	</div>
+	<div class="col-xs-2" style="height:100%; padding-left:0px;">
+		<a href="cart.html">
+			<div class="cart"><span class="cart-count">2</span></div>
+		</a>
+	</div>
+</section>
+<nav class="nav" style="padding: 13px 21px;">
+	<img src="logo-head.png" width="23%" style="margin-bottom:30px" alt="swipe image" />
+	
+	<div class="current-user">
+		<div class="current-user-data">
+			<h3><a href="profile.html">Agus Supriyadi</a></h3>
+			<p>Your points: 9999</p>
+		</div>
+		<div class="avatar" style="width:40px; height:40px;"></div>
+		<div style="clear:both"></div>
+	</div>
+	
+	<a href="shop.html"><p>Catalog</p></a>
+	<a href="outlet.html"><p>Directory</p></a>
+	<a href="games.html"><p>Game</p></a>
+	<a href="news.html"><p>News</p></a>			
+</nav>
 <section class="shoppage">
-		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
-			<div class="col-xs-2">
-				<a href="#" class="ssm-toggle-nav" title="open nav">
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-				</a>
-			</div>
-			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>cart</span>
-			</div>
-		</section>
+		
 		<section class="cart" style="padding-top:12px;">
 			<div class="col-xs-12 padding" style="text-align:left !important;">
 				<div class="col-xs-4">
@@ -89,66 +112,14 @@
 					<h3 style="margin-top:27px !important;">IDR 25.5</h3>
 				</div>
 			</div>
-			<div class="col-xs-12 padding" style="text-align:left !important; margin-top:20px;">
-				<div class="col-xs-4">
-					<div class="cart-img">
-						<div class="cart-img-item">
-							<img src="http://www.kimscravings.com/wp-content/uploads/2015/07/077water.jpg" alt="" />
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-4 no-padding">
-					<p class="name">Cherry Vanilla</p>
-					<div class="col-xs-12 no-padding align-left">
-							<img src="img/minus.png" style=" display:inline; transform: cursor:pointer;" onclick="var el = $(this).siblings('input')[0]; el.value = Math.max(__min, parseInt(el.value)-1);" width="20%" />
-							<input value="0" class="sl-qty" name="day" style="position:absolute;display:inline; width:26%; background:none; font-size:4vw; height:20px; text-align:center; border:none;" disabled />
-							<img src="img/plus.png" style="position:absolute; display:inline; cursor:pointer; left:51px;" onclick="var el = $(this).siblings('input')[0]; el.value = Math.min(__max, parseInt(el.value)+1)" width="20%" />                      
-					</div>						
-				</div>
-				<div class="col-xs-4 no-padding">
-					<h3 style="margin-top:27px !important;">IDR 25.5</h3>
-				</div>
-			</div>
-			<div class="col-xs-12 padding" style="text-align:left !important; margin-top:20px;">
-				<div class="col-xs-4">
-					<div class="cart-img">
-						<div class="cart-img-item">
-							<img src="http://www.kimscravings.com/wp-content/uploads/2015/07/077water.jpg" alt="" />
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-4 no-padding">
-					<p class="name">Cherry Vanilla</p>
-					<div class="col-xs-12 no-padding align-left">
-							<img src="img/minus.png" style=" display:inline; transform: cursor:pointer;" onclick="var el = $(this).siblings('input')[0]; el.value = Math.max(__min, parseInt(el.value)-1);" width="20%" />
-							<input value="0" class="sl-qty" name="day" style="position:absolute;display:inline; width:26%; background:none; font-size:4vw; height:20px; text-align:center; border:none;" disabled />
-							<img src="img/plus.png" style="position:absolute; display:inline; cursor:pointer; left:51px;" onclick="var el = $(this).siblings('input')[0]; el.value = Math.min(__max, parseInt(el.value)+1)" width="20%" />                      
-					</div>						
-				</div>
-				<div class="col-xs-4 no-padding">
-					<h3 style="margin-top:27px !important;">IDR 25.5</h3>
-				</div>
-			</div>
 			<div class="col-xs-12 subtotal" style="padding-top:40px !important; text-align:center !important;">
 				
 				<p class="no-padding">Subtotal</p>
-				<h2 style="margin-top:3px;">IDR 120</h2>
-				<button>CHECKOUT</button>
+				<h2 style="margin-top:3px;">IDR 76.5</h2>
+				<a href="checkout.html"><button>CHECKOUT</button>
 				
 			</div>
 		</section>
-        <nav class="nav" style="padding: 13px 21px;">
-            <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
-            
-			<a href="shop.html"><p>Shop</p></a>
-			<a href="profile.html"><p>Profile</p></a>
-			<a href="redeem.html"><p>Redeem</p></a>
-			<a href="cart.html"><p>Cart</p></a>
-			<a href="outlet.html"><p>Store</p></a>
-			<a href="news.html"><p>News</p></a>
-			<a href="game/index.html"><p>Play CloudJump</p></a>
-			
-        </nav>
       </section>
 	<div class="ssm-overlay ssm-toggle-nav"></div>
 

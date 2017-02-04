@@ -9,25 +9,25 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <link href="style/style.css" rel="stylesheet">
 <link href="style/products.css" rel="stylesheet">
-
+<script type="text/javascript" src="cordova.js"></script>
 </head>
 <body></div>
 <section class="loading">
 	<img src="img/loading.gif" width="20%" />
 </section>
+<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
+	<div class="col-xs-2">
+		<a href="#" class="ssm-toggle-nav" title="open nav">
+			<div class="burger">as</div>
+			<div class="burger">as</div>
+			<div class="burger">as</div>
+		</a>
+	</div>
+	<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
+		<span>news</span>
+	</div>
+</section>
 <section class="shoppage">
-		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
-			<div class="col-xs-2">
-				<a href="#" class="ssm-toggle-nav" title="open nav">
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-				</a>
-			</div>
-			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>news</span>
-			</div>
-		</section>
 		<section class="news">
 			<div class="container">
 				<div class="row">
@@ -46,7 +46,7 @@
 								<li>coffee vanilla chocolate</li>
 								<li>vanilla blackberry chocolate</li>
 							</ul>
-							<button style="background: #E3B75B; color: black; border: none; padding: 4px; width: 100%;">Share this</button>
+							<button onclick="window.plugins.socialsharing.share('introducing the Häagen-Dazs TRIO collection.', 'discover layer upon layer of our New TRIO Ice Cream', 'https://www.haagendazs.us/media/1423/hd_newstrio_familypackheadershot_cropped_01.jpg', 'https://www.haagendazs.us/about/news/discover-layer-upon-layer-of-our-new-trio-ice-cream/')" style="background: #E3B75B; color: black; border: none; padding: 4px; width: 100%;">Share this</button>
 						</div>						
 					</div>
 										
@@ -54,16 +54,21 @@
 			</div>
 		</section>
         <nav class="nav" style="padding: 13px 21px;">
-            <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
-            
-			<a href="shop.html"><p>Shop</p></a>
-			<a href="profile.html"><p>Profile</p></a>
-			<a href="redeem.html"><p>Redeem</p></a>
-			<a href="cart.html"><p>Cart</p></a>
-			<a href="outlet.html"><p>Store</p></a>
-			<a href="news.html"><p>News</p></a>
-			<a href="game/index.html"><p>Play CloudJump</p></a>
+            <img src="logo-head.png" width="23%" style="margin-bottom:30px" alt="swipe image" />
+	
+			<div class="current-user">
+				<div class="current-user-data">
+					<h3><a href="profile.html">Agus Supriyadi</a></h3>
+					<p>Your points: 9999</p>
+				</div>
+				<div class="avatar" style="width:40px; height:40px;"></div>
+				<div style="clear:both"></div>
+			</div>
 			
+			<a href="shop.html"><p>Catalog</p></a>
+			<a href="outlet.html"><p>Directory</p></a>
+			<a href="games.html"><p>Game</p></a>
+			<a href="news.html"><p>News</p></a>		
         </nav>
       </section>
 	<div class="ssm-overlay ssm-toggle-nav"></div>

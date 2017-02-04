@@ -5,7 +5,12 @@
 <meta name="description" content="">
 <link rel="canonical" href="">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 <link href="style/style.css" rel="stylesheet">
+<script src="https://use.fontawesome.com/6fac2730d4.js"></script>
+<link href="style/products.css" rel="stylesheet">
+<link rel="stylesheet" href="style/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
 </head>
 <body></div>
 <section class="loading">
@@ -13,20 +18,20 @@
 </section>
 <section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px;">
 	<div class="col-xs-2">
-	<a href="#" class="ssm-toggle-nav" title="open nav">
-		<div class="burger">-</div>
-		<div class="burger">-</div>
-		<div class="burger">-</div>
-	</a>
+		<a href="#" class="ssm-toggle-nav" title="open nav">
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+		</a>
 	</div>
-	<div class="col-xs-8">
+	<div class="col-xs-8" style="text-align:left; padding-top:6px; color:white;">
+		<span>Thank You</span>
 	</div>
 	<div class="col-xs-2" style="height:100%; padding-left:0px;">
 		<a href="cart.html">
 			<div class="cart"><span class="cart-count">2</span></div>
 		</a>
 	</div>
-	<img src="logo-head.png" />
 </section>
 <nav class="nav" style="padding: 13px 21px;">
 	<img src="logo-head.png" width="23%" style="margin-bottom:30px" alt="swipe image" />
@@ -43,30 +48,47 @@
 	<a href="shop.html"><p>Catalog</p></a>
 	<a href="outlet.html"><p>Directory</p></a>
 	<a href="games.html"><p>Game</p></a>
-	<a href="news.html"><p>News</p></a>	
+	<a href="news.html"><p>News</p></a>		
 </nav>
-<section class="mainpage">
-		<section class="contenthome">
-			<div>
-				<h3>Hallo Agus Supriyadi</h3>
-				<span><img src="http://cliparts.co/cliparts/Bcg/rxo/Bcgrxonqi.png" width="12%"> 1200 poin</span>
-			</div>
-		</section>
-        
-</section>
-<footer>&copy; 2017 Haagen-Daaz Coorporation all right reserved.</footer>
-<div class="ssm-overlay ssm-toggle-nav"></div>
+<section class="shoppage">
+		<div class="col-xs-12 no-padding" style="margin-top: 20px;">
+			<h3>Thank You</h3>
+			<p>Your payment has been complete.</p>
+		</div>
+		<a href="shop.html"><button class="done" style="width: 80%; padding: 4px; color: #000; background: #c1af69; margin:15px auto !important; border: none;">Back to Catalog</button></a>
+      </section>
+	<div class="ssm-overlay ssm-toggle-nav"></div>
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- touchSwipe library -->
 <script>
+$(".loading").show();
+$(".shoppage").hide();
 $(document).ready(function() {
-	$('.nav').slideAndSwipe();
+	
 	$(".loading").hide();
-	$(".mainpage").show();
+	$(".shoppage").show();
 });
 </script>
+<script>
+	$(document).ready(function() {
+		$(".continue").click(function(){
+			$(".asu").trigger( "click" );
+		});
+		$('.nav').slideAndSwipe();
+		
+		var buka=0;
+		
+		$(".ssm-toggle-nav").click(function(){
+			 //$( ".contenthome" ).fadeToggle( "fast", "linear");
+			//$(".header").slideToggle( "fast");
+		});
+	});
+</script>
+
+ <script type="text/javascript" src="cordova.js"></script>
 <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

@@ -10,144 +10,195 @@
 <link href="style/products.css" rel="stylesheet">
 <link rel="stylesheet" href="style/slick.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+<style type="text/css">
+	
+/* ACCORDION */
+.sl-accordion{
+  background: #e5d07d;
+  color: black;
+  border-bottom: #e5d07d 2px solid;
+  border-left: #e5d07d 2px solid;
+  box-shadow: 0 1px 2px #ccc;
+}
+
+.sl-accordion input[type='radio']:checked ~ .info{
+  height: 260px;
+  padding: 10px 10px 15px 18px;
+  transition: .3s ease-in;
+  background: #fff;
+}
+
+.sl-accordion input[type='radio']{
+  width: 100%;
+  display: none;
+}
+
+.sl-accordion label{
+  width: 450px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.sl-accordion span{
+  font-size:5.5vw;
+  font-weight: bold;
+  display: block;
+  padding: 10px 12px 0px 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.sl-accordion .info{
+  background: #fff;
+  color: #222;
+  width: 100%;
+  height: 0;
+  line-height: 1.4;
+  padding-left: 15px;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: .3s ease-out;
+  font-size:5vw;
+  letter-spacing:0.04em;
+} 
+
+.sl-accordion h4{
+  color: #111;
+  text-align: right;
+  text-shadow: 2px 2px 3px #fff;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+}
+
+.sl-accordion h4 a{
+  color: #111;
+  text-decoration: none;
+}
+
+::selection{
+  background: #222;
+  color: #fff;
+}
+
+.sl-article p{
+	font-size:4.8vw;
+	line-height:1.2em;
+}
+
+.sl-article a{
+	color: black !important;
+}
+
+</style>
 </head>
 <body></div>
 <section class="loading">
 	<img src="img/loading.gif" width="20%" />
 </section>
+<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px;">
+	<div class="col-xs-2">
+		<a href="#" class="ssm-toggle-nav" title="open nav">
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+		</a>
+	</div>
+	<div class="col-xs-8" style="text-align:left; padding-top:6px; color:white;">
+		<span>Catalog</span>
+	</div>
+	<div class="col-xs-2" style="height:100%; padding-left:0px;">
+		<a href="cart.html">
+			<div class="cart"><span class="cart-count">2</span></div>
+		</a>
+	</div>
+</section>
+<nav class="nav" style="padding: 13px 21px;">
+	<img src="logo-head.png" width="23%" style="margin-bottom:30px" alt="swipe image" />
+	
+	<div class="current-user">
+		<div class="current-user-data">
+			<h3><a href="profile.html">Agus Supriyadi</a></h3>
+			<p>Your points: 9999</p>
+		</div>
+		<div class="avatar" style="width:40px; height:40px;"></div>
+		<div style="clear:both"></div>
+	</div>
+	
+	<a href="shop.html"><p>Catalog</p></a>
+	<a href="outlet.html"><p>Directory</p></a>
+	<a href="games.html"><p>Game</p></a>
+	<a href="news.html"><p>News</p></a>			
+</nav>
 <section class="shoppage">
-		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
-			<div class="col-xs-2">
-				<a href="#" class="ssm-toggle-nav" title="open nav">
-					<div class="burger">-</div>
-					<div class="burger">-</div>
-					<div class="burger">-</div>
-				</a>
-			</div>
-			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>products</span>
-			</div>
+	<div class="col-xs-12 no-padding" style="max-height: 30vh; overflow: hidden;">
+								<img src="https://b.zmtcdn.com/data/menus/943/59943/e5d40baa3c4da9b71ef10623471980b2.jpg" class="img-responsive" />
+							</div>
+			<div class="container" style="text-align: left;">
+		<div class="row">
+            <!-- LOGO -->
+             <div class="sl-accordion">
+  <input type="radio" name="city" id="cityA" checked />   
+  <label for="cityA"><span>Novelty Pack</span></label>
+  <div class="info sl-article">
+    <p><a href="catalog.html">Mini Cup</a></p>
+    <p><a href="catalog.html">Pint</a></p>
+    <p><a href="catalog.html">Stick Bar</a></p>
+    <p><a href="catalog.html">Crispy Sandwich</a></p>
+  </div>
+</div>
+<div class="sl-accordion">
+  <input type="radio" name="city" id="cityB"/>
+  <label for="cityB"><span>Creation Menu</span></label>
+  <div class="info sl-article">
+    <p><a href="catalog.html">Fondue</a></p>
+    <p><a href="catalog.html">Macaroon Collection</a></p>
+    <p><a href="catalog.html">Eiffel Tower</a></p>
+    <p><a href="catalog.html">Banana Split</a></p>
+    <p><a href="catalog.html">Paradise</a></p>
+    <p><a href="catalog.html">Flower Blossom</a></p>
+  </div>
+</div>
+<div class="sl-accordion">
+  <input type="radio" name="city" id="cityC" />
+  <label for="cityC"><span>Coffee Indulgence</span></label>
+  <div class="info sl-article">
+    <p>Espresso</p>
+    <p>Double Espresso</p>
+    <p>Espresso Machiato</p>  
+    <p>Cappucino</p>
+    <p>Cafe Latte</p>
+    <p>Fresh Brewed Coffee</p>
+    <p>Bailey's Coffee</p>
+  </div>
+</div>
+
+<div class="sl-accordion">
+  <input type="radio" name="city" id="cityD" />
+  <label for="cityD"><span>Ice Cream Cake</span></label>
+</div>
+
+<div class="sl-accordion">
+  <input type="radio" name="city" id="cityE" />
+  <label for="cityE"><span>Sliced Cake</span></label>
+</div>
+
+<div class="sl-accordion">
+  <input type="radio" name="city" id="cityF" />
+  <label for="cityF"><span>Beverages</span></label>
+  <div class="info sl-article">
+    <p>Frappe</p>
+    <p>Shake</p>
+    <p>Chocolate</p>
+    <p>Coffee</p>
+    <p>Boiled Water</p> 
+    <p>Soft Drink</p>   
+  </div>
+</div>
+        </div>
+	</div>
 		</section>
-		<section class="contentshop slick-initialized">
-			<div class="sub-header ">
-			  <div class="swipe-tabs">
-				<div class="swipe-tab">Ice Cream</div>
-				<div class="swipe-tab">Gelato</div>
-				<div class="swipe-tab">Bars</div>
-				<div class="swipe-tab">Frozen Yogurt</div>
-				<div class="swipe-tab">Sorbet</div>
-			  </div>
-			</div>
-			<div class="main-container ">
-			  <div class="swipe-tabs-container col-xs-12 no-padding	">
-				<div class="swipe-tab-content">
-					<div class="col-xs-6 products prod1a">
-						<h4>Choco Butter</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1b">
-						<h4>Caramel</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1c">
-						<h4>Choco</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1d">
-						<h4>Cheese Butter</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-				</div>
-				<div class="swipe-tab-content">
-					<div class="swipe-tab-content">
-						<div class="col-xs-6 products prod2a">
-							<h4>Cappucino</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-						<div class="col-xs-6 products prod2b">
-							<h4>Tiramisu</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-						<div class="col-xs-6 products prod2c">
-							<h4>Sea Salt Caramel</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-						<div class="col-xs-6 products prod2d">
-							<h4>Stracciatella</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="swipe-tab-content">
-					<div class="col-xs-6 products prod1a">
-						<h4>Choco Butter</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1b">
-						<h4>Caramel</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1c">
-						<h4>Choco</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1d">
-						<h4>Cheese Butter</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-				</div>
-				<div class="swipe-tab-content"><div class="swipe-tab-content">
-						<div class="col-xs-6 products prod2a">
-							<h4>Cappucino</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-						<div class="col-xs-6 products prod2b">
-							<h4>Tiramisu</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-						<div class="col-xs-6 products prod2c">
-							<h4>Sea Salt Caramel</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-						<div class="col-xs-6 products prod2d">
-							<h4>Stracciatella</h4>
-							<a href="details.html"><button>Buy Now</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="swipe-tab-content">
-					<div class="col-xs-6 products prod1a">
-						<h4>Choco Butter</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1b">
-						<h4>Caramel</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1c">
-						<h4>Choco</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-					<div class="col-xs-6 products prod1d">
-						<h4>Cheese Butter</h4>
-						<a href="details.html"><button>Buy Now</button></a>
-					</div>
-				</div>
-			  </div>
-			</div>
-		</section>
-        <nav class="nav" style="padding: 13px 21px;">
-            <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
-            
-			<a href="shop.html"><p>Shop</p></a>
-			<a href="profile.html"><p>Profile</p></a>
-			<a href="redeem.html"><p>Redeem</p></a>
-			<a href="cart.html"><p>Cart</p></a>
-			<a href="outlet.html"><p>Store</p></a>
-			<a href="news.html"><p>News</p></a>
-			<a href="game/index.html"><p>Play CloudJump</p></a>
-			
-        </nav>
       </section>
 	<div class="ssm-overlay ssm-toggle-nav"></div>
 
@@ -174,88 +225,7 @@ $(document).ready(function() {
 		});
 	});
 </script>
-
-<script type="text/javascript">
-
-
-$(document).ready(function() {
-  'use strict';
-  
-  var $swipeTabsContainer = $('.swipe-tabs'),
-    $swipeTabs = $('.swipe-tab'),
-    $swipeTabsContentContainer = $('.swipe-tabs-container'),
-    currentIndex = 0,
-    activeTabClassName = 'active-tab';
-
-  $swipeTabsContainer.on('init', function(event, slick) {
-    $swipeTabsContentContainer.removeClass('invisible');
-    $swipeTabsContainer.removeClass('invisible');
-
-    currentIndex = slick.getCurrent();
-    $swipeTabs.removeClass(activeTabClassName);
-        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
-  });
-
-  $swipeTabsContainer.slick({
-    //slidesToShow: 3.25,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    infinite: false,
-    swipeToSlide: true,
-    touchThreshold: 10,
-    animating: false,
-    focusOnSelect: true,
-    fade: false,
-
-  });
-
-   $swipeTabsContentContainer.slick({
-    asNavFor: $swipeTabsContainer,
-    adaptiveHeight: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    infinite: false,
-    animating: false,
-    //vertical: false,
-    //verticalSwiping: false,
-    //speed:1,
-    fade: false,
-    lazyLoad: 'ondemand',
-    swipeToSlide: true,
-    draggable: false,
-    touchThreshold: 5,
-    variableWidth: false,
-    focusOnSelect: true,
-    centerMode: true,
-    centerPadding: '1px',
-  });
-
-
-  $swipeTabs.on('click', function(event) {
-        // gets index of clicked tab
-        currentIndex = $(this).data('slick-index');
-        $swipeTabs.removeClass(activeTabClassName);
-        $('.swipe-tab[data-slick-index=' + currentIndex +']').addClass(activeTabClassName);
-        $swipeTabsContainer.slick('slickGoTo', currentIndex);
-        $swipeTabsContentContainer.slick('slickGoTo', currentIndex);
-   
-    });
-
-    //initializes slick navigation tabs swipe handler
-    $swipeTabsContentContainer.on('swipe', function(event, slick, direction) {
-      currentIndex = $(this).slick('slickCurrentSlide');
-    $(".img-responsive")
-         
-    $swipeTabs.removeClass(activeTabClassName);
-    $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
-  });
-  
-  
-});
-</script>
- <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>

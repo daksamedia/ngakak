@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<head>
+<title>Haagen Daaz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="">
+<link rel="canonical" href="">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="style/style.css" rel="stylesheet">
+<script src="https://use.fontawesome.com/6fac2730d4.js"></script>
+<link href="style/products.css" rel="stylesheet">
+<link rel="stylesheet" href="style/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+</head>
+<body></div>
+<section class="loading">
+	<img src="img/loading.gif" width="20%" />
+</section>
+<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px;">
+	<div class="col-xs-2">
+		<a href="#" class="ssm-toggle-nav" title="open nav">
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+		</a>
+	</div>
+	<div class="col-xs-8" style="text-align:left; padding-top:6px; color:white;">
+		<span>Catalog</span>
+	</div>
+	<div class="col-xs-2" style="height:100%; padding-left:0px;">
+		<a href="cart.html">
+			<div class="cart"><span class="cart-count">2</span></div>
+		</a>
+	</div>
+</section>
+<nav class="nav" style="padding: 13px 21px;">
+	<img src="logo-head.png" width="23%" style="margin-bottom:30px" alt="swipe image" />
+	
+	<div class="current-user">
+		<div class="current-user-data">
+			<h3><a href="profile.html">Agus Supriyadi</a></h3>
+			<p>Your points: 9999</p>
+		</div>
+		<div class="avatar" style="width:40px; height:40px;"></div>
+		<div style="clear:both"></div>
+	</div>
+	
+	<a href="shop.html"><p>Catalog</p></a>
+	<a href="outlet.html"><p>Directory</p></a>
+	<a href="games.html"><p>Game</p></a>
+	<a href="news.html"><p>News</p></a>		
+</nav>
+<section class="shoppage">
+		
+		<section class="contentshop slick-initialized">
+			<div class="sub-header ">
+			  <div class="swipe-tabs">
+				<div class="swipe-tab">Delivery</div>
+				<div class="swipe-tab asu">Payment</div>
+				
+			  </div>
+			</div>
+			<div class="main-container ">
+			  <div class="swipe-tabs-container col-xs-12 no-padding	">
+				<div class="swipe-tab-content" style="background: #f7f7f7">
+					<div class="col-xs-12 align-left">
+						<h3>Delivery Option</h3>
+						<br>
+						<div class="col-xs-12 no-padding align-left">
+							<span><input id="radio-1" class="radio-custom"name="radio-group" type="radio">
+							<label for="radio-1" class="radio-custom-label">Store Pick Up</label></span>
+						</div>
+						<div class="col-xs-12 no-padding align-left">
+							<span><input id="radio-2" class="radio-custom"name="radio-group" type="radio">
+							<label for="radio-2" class="radio-custom-label">Send to My Address</label></span>
+						</div>
+						<div class="col-xs-12 no-padding align-left">
+							<span><input id="radio-3" class="radio-custom"name="radio-group" type="radio">
+							<label for="radio-3" class="radio-custom-label">Send as Gift</label></span>
+						</div>
+						<div class="col-xs-12 no-padding" style="margin-top: 20px;">
+						<h3>Delivery Address</h3>
+						</div>
+						<select name="address" style="width:100%; border: #e4e4e4 1px solid; padding:4px; background:none; margin-bottom:15px; margin-top:15px;">
+							<option value="">-- Choose Address --</option>
+							<option value="home">My Address</option>
+							<option value="work">Work Address</option>
+						</select>
+						<input type="text" style="width:100%; border: #e4e4e4 1px solid; padding:4px; padding:4px; background:none; margin-bottom:15px; margin-top:15px;" placeholder="Your Address"  />	
+						<select name="address" style="width:100%; border: #e4e4e4 1px solid; padding:4px; background:none; margin-bottom:15px; margin-top:15px;">
+							<option value="">-- Choose Province --</option>
+							<option value="dki">DKI Jakarta</option>
+							<option value="jabar">Jawa Barat</option>
+							<option value="jatim">Jawa Timur</option>
+							<option value="bali">Bali</option>
+						</select>
+						<select name="address" style="width:100%; border: #e4e4e4 1px solid; padding:4px; background:none; margin-bottom:15px; margin-top:15px;">
+							<option value="">-- Choose District --</option>
+							<option value="home">Jakarta Selatan</option>
+							<option value="work">Jakarta Pusat</option>
+							<option value="work">Jakarta Barat</option>
+							<option value="work">Jakarta Timur</option>
+							<option value="work">Jakarta Utara</option>
+						</select>
+						<select name="address" style="width:100%; border: #e4e4e4 1px solid; padding:4px; background:none; margin-bottom:15px; margin-top:15px;">
+							<option value="">-- Choose Subdistrict --</option>
+							<option value="home">Tebet</option>
+							<option value="work">Pancoran</option>
+							<option value="work">Pasar Minggu</option>
+							<option value="work">Kebayoran Lama</option>
+							<option value="work">Kebayoran Baru</option>
+							<option value="work">Pondok Labu</option>
+							<option value="work">Cilandak</option>
+							<option value="work">Ragunan</option>
+						</select>
+						<div class="col-xs-12 no-padding align-left">
+							<span><input id="radio-4" class="radio-custom" name="radio-err" type="radio">
+							<label for="radio-4" class="radio-custom-label">Save as </label></span>
+						</div>
+						<input type="text" style="width:100%; border: #e4e4e4 1px solid; padding:4px; padding:4px; background:none; margin-bottom:15px; margin-top:15px;" placeholder="Your Adress Name.."  />
+						
+						<div class="col-xs-12 no-padding" style="margin-top: 20px;">
+							<h3>Invoice</h3>
+						</div>
+						<div class=" table-responsive" style="margin-bottom:13px !important">
+							<table class="table" style="border:none; 	margin-bottom:0px !important">
+								<tbody >
+									<tr>
+										<th style="background:#fff;">Product</th>
+										<th style="background:#fff;">Qty</th>
+										<th style="background:#c1af69;">Price</th>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Cherry Cheese</td>
+										<td style="background:#fff;">1</td>
+										<td style="background:#c1af69;">Rp. 200.000</td>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Milk Shake</td>
+										<td style="background:#fff;">1</td>
+										<td style="background:#c1af69;">Rp. 132.000</td>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Banana Split</td>
+										<td style="background:#fff;">1</td>
+										<td style="background:#c1af69;">Rp. 100.000</td>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Delivery Cost</td>
+										<td style="background:#fff;">-</td>
+										<td style="background:#c1af69;">Rp. 20.000</td>
+									</tr>
+													
+								</tbody>
+							</table>
+								</div>
+								<div class="col-xs-12 no-padding" style="margin-top: 20px; text-align: center;">
+									<p class="no-padding">Total</p>
+									<h3 class="no-padding">Rp. 352.000</h3>
+								</div>
+							<button class="continue" style="width: 100%; padding: 4px; color: #000; background: #c1af69; margin:15px auto !important; border: none;">Continue Payment</button>
+					</div>
+				</div>
+				<div class="swipe-tab-content">
+					<div class="col-xs-12 align-left">
+						
+						<h3>Payment Option</h3>
+						<br>
+						<div class="col-xs-12 no-padding align-left">
+							<span><input id="radio-x" class="radio-custom" name="radio-2" type="radio">
+							<label for="radio-x" class="radio-custom-label">Credit Card</label></span>
+						</div>
+						<div class="col-xs-12 no-padding align-left">
+							<span><input id="radio-y" class="radio-custom" name="radio-2" type="radio">
+							<label for="radio-y" class="radio-custom-label">Cash on Delivery</label></span>
+						</div>						
+						<div class="col-xs-12 no-padding" style="margin-top: 20px;">
+							<h3>Card Information</h3>
+						</div>
+						<input type="text" style="width:100%; border: #e4e4e4 1px solid; padding:4px; padding:4px; background:none; margin-bottom:15px; margin-top:15px;" placeholder="Your Card Number.."  />
+						<div class="col-xs-6 no-padding">
+							<div class="col-xs-6 no-padding">
+								<input type="text" style="width:100%; border: #e4e4e4 1px solid; padding:4px; padding:4px; background:none; margin-bottom:15px; margin-top:10px;" placeholder="MM"  />
+							</div>
+							<div class="col-xs-6">
+								<input type="text" style="width:100%; border: #e4e4e4 1px solid; padding:4px; padding:4px; background:none; margin-bottom:15px; margin-top:10px;" placeholder="YYYY"  />
+							</div>
+							</div>		
+			
+						<div class="col-xs-6 no-padding align-right">
+							<input type="text" style="width:70%; border: #e4e4e4 1px solid; padding:4px; padding:4px; background:none; margin-bottom:15px; margin-top:10px;" placeholder="CVC"  />
+						</div>
+						<div class="col-xs-12 no-padding" style="margin-top: 20px;">
+							<h3>Invoice</h3>
+						</div>
+						<div class=" table-responsive" style="margin-bottom:13px !important">
+							<table class="table" style="border:none; 	margin-bottom:0px !important">
+								<tbody >
+									<tr>
+										<th style="background:#fff;">Product</th>
+										<th style="background:#fff;">Qty</th>
+										<th style="background:#c1af69;">Price</th>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Cherry Cheese</td>
+										<td style="background:#fff;">1</td>
+										<td style="background:#c1af69;">Rp. 200.000</td>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Milk Shake</td>
+										<td style="background:#fff;">1</td>
+										<td style="background:#c1af69;">Rp. 132.000</td>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Banana Split</td>
+										<td style="background:#fff;">1</td>
+										<td style="background:#c1af69;">Rp. 100.000</td>
+									</tr>
+									<tr>
+										<td style="background:#fff;">Delivery Cost</td>
+										<td style="background:#fff;">-</td>
+										<td style="background:#c1af69;">Rp. 20.000</td>
+									</tr>
+													
+								</tbody>
+							</table>
+								</div>
+								<div class="col-xs-12 no-padding" style="margin-top: 20px; text-align: center;">
+									<p class="no-padding">Total</p>
+									<h3 class="no-padding">Rp. 352.000</h3>
+								</div>
+								<a href="thanks.html"><button class="done" style="width: 100%; padding: 4px; color: #000; background: #c1af69; margin:15px auto !important; border: none;">Complete Payment</button></a>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</section>
+      </section>
+	<div class="ssm-overlay ssm-toggle-nav"></div>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- touchSwipe library -->
+<script>
+$(".loading").show();
+$(".shoppage").hide();
+$(document).ready(function() {
+	
+	$(".loading").hide();
+	$(".shoppage").show();
+});
+</script>
+<script>
+	$(document).ready(function() {
+		$(".continue").click(function(){
+			$(".asu").trigger( "click" );
+		});
+		$('.nav').slideAndSwipe();
+		
+		var buka=0;
+		
+		$(".ssm-toggle-nav").click(function(){
+			 //$( ".contenthome" ).fadeToggle( "fast", "linear");
+			//$(".header").slideToggle( "fast");
+		});
+	});
+</script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+  'use strict';
+  
+  var $swipeTabsContainer = $('.swipe-tabs'),
+    $swipeTabs = $('.swipe-tab'),
+    $swipeTabsContentContainer = $('.swipe-tabs-container'),
+    currentIndex = 0,
+    activeTabClassName = 'active-tab';
+
+  $swipeTabsContainer.on('init', function(event, slick) {
+    $swipeTabsContentContainer.removeClass('invisible');
+    $swipeTabsContainer.removeClass('invisible');
+
+    currentIndex = slick.getCurrent();
+    $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+  });
+
+  $swipeTabsContainer.slick({
+    //slidesToShow: 3.25,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: false,
+    swipeToSlide: true,
+    touchThreshold: 10,
+    animating: false,
+    focusOnSelect: true,
+    fade: false,
+
+  });
+
+   $swipeTabsContentContainer.slick({
+    asNavFor: $swipeTabsContainer,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: false,
+    animating: false,
+    //vertical: false,
+    //verticalSwiping: false,
+    //speed:1,
+    fade: false,
+    lazyLoad: 'ondemand',
+    swipeToSlide: true,
+    draggable: false,
+    touchThreshold: 5,
+    variableWidth: false,
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: '1px',
+  });
+
+
+  $swipeTabs.on('click', function(event) {
+        // gets index of clicked tab
+        currentIndex = $(this).data('slick-index');
+        $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex +']').addClass(activeTabClassName);
+        $swipeTabsContainer.slick('slickGoTo', currentIndex);
+        $swipeTabsContentContainer.slick('slickGoTo', currentIndex);
+   
+    });
+
+    //initializes slick navigation tabs swipe handler
+    $swipeTabsContentContainer.on('swipe', function(event, slick, direction) {
+      currentIndex = $(this).slick('slickCurrentSlide');
+    $(".img-responsive")
+         
+    $swipeTabs.removeClass(activeTabClassName);
+    $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+  });
+  
+  
+});
+</script>
+ <script type="text/javascript" src="cordova.js"></script>
+<script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

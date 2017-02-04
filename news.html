@@ -8,31 +8,101 @@
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <link href="style/style.css" rel="stylesheet">
+<link href="http://idangero.us/swiper/dist/css/swiper.min.css" rel="stylesheet">
 <link href="style/products.css" rel="stylesheet">
+<style type="text/css">
+	.swiper-container {
+        width: 100%;
+        height: 25vh;
+        margin-top:32px;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        width: 100%;
+    }
 
+</style>
 </head>
 <body></div>
 <section class="loading">
 	<img src="img/loading.gif" width="20%" />
 </section>
-<section class="shoppage">
-		<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px; padding-left:18px;">
-			<div class="col-xs-2">
-				<a href="#" class="ssm-toggle-nav" title="open nav">
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-					<div class="burger">as</div>
-				</a>
+<section class="header" style="background:#222222; height:40px; width:100%; padding-top:3px;">
+	<div class="col-xs-2">
+		<a href="#" class="ssm-toggle-nav" title="open nav">
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+			<div class="burger">-</div>
+		</a>
+	</div>
+	<div class="col-xs-8" style="text-align:left; padding-top:6px; color:white;">
+		<span>News</span>
+	</div>
+	<div class="col-xs-2" style="height:100%; padding-left:0px;">
+		<a href="cart.html">
+			<div class="cart"><span class="cart-count">2</span></div>
+		</a>
+	</div>
+</section>
+<nav class="nav" style="padding: 13px 21px;">
+	<img src="logo-head.png" width="23%" style="margin-bottom:30px" alt="swipe image" />
+	
+	<div class="current-user">
+		<div class="current-user-data">
+			<h3><a href="profile.html">Agus Supriyadi</a></h3>
+			<p>Your points: 9999</p>
+		</div>
+		<div class="avatar" style="width:40px; height:40px;"></div>
+		<div style="clear:both"></div>
+	</div>
+	
+	<a href="shop.html"><p>Catalog</p></a>
+	<a href="outlet.html"><p>Directory</p></a>
+	<a href="games.html"><p>Game</p></a>
+	<a href="news.html"><p>News</p></a>		
+</nav>
+<div class="container">
+			<div class="row">
+				<div class="col-xs-12 no-padding">
+					<div class="swiper-container">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide"><img src="img/slide/promo1.jpg" class="img-responsive" /></div>
+					            <div class="swiper-slide"><img src="img/slide/promo2.jpg" class="img-responsive" /></div>
+					            
+					        </div>
+					        <!-- Add Pagination -->
+					        <div class="swiper-pagination"></div>
+					        <!-- Add Arrows -->
+					        
+					</div>
+				</div>	
 			</div>
-			<div class="col-xs-10" style="text-align:left; padding-top:6px; color:white;">
-				<span>news</span>
-			</div>
-		</section>
+		</div>
+<section class="newspage">
+
 		<section class="news">
 			<div class="container">
 				<div class="row">
+					<div class="col-xs-12" style="margin-top: 5px; text-align: left !important;">
+						<h2>News & Promo</h2>
+					</div>
 					<div class="col-xs-12 no-padding newsitem">
-						<div style="margin-top: 20px; margin-bottom: 20px; text-align: left;" class="col-xs-12 newscontent">
+						<div style="margin-top: 10px; margin-bottom: 20px; text-align: left;" class="col-xs-12 newscontent">
 							<img src="https://www.haagendazs.us/media/1423/hd_newstrio_familypackheadershot_cropped_01.jpg" class="img-responsive" />
 							<h3>discover layer upon layer of our New TRIO Ice Cream</h3>
 							<P style="max-height: 10vh; overflow: hidden;">introducing the Häagen-Dazs TRIO collection. Inside every carton is an extraordinary combination of tastes and textures – from classic....</P>
@@ -49,6 +119,21 @@
 					</div>
 					<div class="col-xs-12 no-padding newsitem">
 						<div style="margin-top: 20px; margin-bottom: 20px; text-align: left;" class="col-xs-12 newscontent">
+							<iframe width="100%" height="201" src="https://www.youtube.com/embed/s3zY4Trz7po" frameborder="0" allowfullscreen></iframe>
+							<h3>Häagen-Dazs commercial with Bradley Cooper on air!</h3>
+							<P style="max-height: 10vh; overflow: hidden;">Agency: Saatchi & Saatchi NY / Team One
+Global Creative Director: Chris Graves
+Art Director: Bob Bjarke
+Copywriter: Heather Parke
+Production Company: Believe LA
+Director: Allen Hughes
+DoP: Alex Lamarque
+Executive Producer: Gerard Cantor </P>
+							<a href="https://www.youtube.com/watch?v=s3zY4Trz7po&app=desktop"><button style="background: #E3B75B; color: black; border: none; padding: 4px; width: 100%;">Read more</button></a>
+						</div>						
+					</div>
+					<div class="col-xs-12 no-padding newsitem">
+						<div style="margin-top: 20px; margin-bottom: 20px; text-align: left;" class="col-xs-12 newscontent">
 							<img src="https://www.haagendazs.us/media/1009/newyearnewflavors_header.jpg" class="img-responsive" />
 							<h3>new year, new flavors</h3>
 							<P style="max-height: 10vh; overflow: hidden;">whether it’s an enticing ingredient or a captivating crunch, we’re endlessly searching for the spark of a new flavor. this year, we scoured the globe and found the inspiration for seven exotic new tastes. </P>
@@ -58,18 +143,6 @@
 				</div>
 			</div>
 		</section>
-        <nav class="nav" style="padding: 13px 21px;">
-            <img src="logo-head.png" width="23%" style="margin-bottom:50px" alt="swipe image" />
-            
-			<a href="shop.html"><p>Shop</p></a>
-			<a href="profile.html"><p>Profile</p></a>
-			<a href="redeem.html"><p>Redeem</p></a>
-			<a href="cart.html"><p>Cart</p></a>
-			<a href="outlet.html"><p>Store</p></a>
-			<a href="news.html"><p>News</p></a>
-			<a href="game/index.html"><p>Play CloudJump</p></a>
-			
-        </nav>
       </section>
 	<div class="ssm-overlay ssm-toggle-nav"></div>
 
@@ -88,12 +161,25 @@ $(".loading").show();
 $(".shoppage").hide();
 $(document).ready(function() {
 	
+
+	var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			autoplay: 4500,
+			spaceBetween: 30
+		});		
+
+
 	$(".loading").hide();
 	$(".shoppage").show();
 });
 </script>
+
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+<link href="http://idangero.us/swiper/dist/css/swiper.css" rel="stylesheet">
+<script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
 <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 <script src="http://joanclaret.github.io/slide-and-swipe-menu/jquery.slideandswipe.js"></script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
