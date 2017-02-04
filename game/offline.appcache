@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1485822854
+#1486179124
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -25,6 +25,22 @@ images/score_board-sheet0.png
 images/sprite-sheet0.png
 images/setting_btn-sheet0.png
 images/redeem_btn-sheet0.png
+images/level_-sheet0.png
+images/particles.png
+images/next-sheet0.png
+images/heart-sheet0.png
+images/sprite2-sheet0.png
+images/sprite3-sheet0.png
+images/sprite5-sheet0.png
+images/sprite4-sheet0.png
+media/bg1.ogg
+media/bg2.ogg
+media/die.ogg
+media/enemy-death.ogg
+media/get-ice.ogg
+media/jump.ogg
+media/dead.ogg
+media/win.ogg
 icon-16.png
 icon-32.png
 icon-114.png
